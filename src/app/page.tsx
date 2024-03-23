@@ -6,15 +6,19 @@ import Skill from "@/components/Skill";
 import { ModeToggle } from "@/components/themeprovider/mode-toggle";
 import Link from "next/link";
 
-interface MenuItem {
+export interface skill {
   render?: string;
-  image?: string;
+  image: string;
   skill?: { title: string }[];
-  category?: string;
-  items?: { title: string }[];
 }
 
-const menuItems: MenuItem[] = [
+export interface project {
+  width: number;
+  height: number;
+  aspectRatio?: string;
+}
+
+const skills: skill[] = [
   {
     render: "Frontend Skill",
     image: "/p1.jpg",
@@ -59,7 +63,7 @@ export default function Home() {
       </div>
 
       <div className="container mx-auto space-y-5">
-        <section className="place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1] h-screen w-full">
+        <section className=" place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1] h-screen w-full ">
           <HeroSection />
         </section>
 
@@ -68,8 +72,8 @@ export default function Home() {
             My Skill
           </h1>
           <div className="flex flex-wrap">
-            {menuItems.map((item) =>
-              item.render ? (
+            {skills.map((item) =>
+              item.render && item.image ? (
                 <Skill
                   key={item.render}
                   render={item.render}

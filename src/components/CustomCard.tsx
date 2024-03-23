@@ -1,9 +1,10 @@
+import { project } from "@/app/page";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const CustomCard = ({ album, width, height, aspectRatio }) => {
+const CustomCard: React.FC<project> = ({ width, height, aspectRatio }) => {
   return (
     <Link href={""} className=" w-6/12 sm:w-4/12 lg:w-3/12 p-6">
       <div className="overflow-hidden rounded-md">

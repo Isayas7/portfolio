@@ -1,12 +1,9 @@
+import { skill } from "@/app/page";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
-const Skill: React.FC<{
-  render: string;
-  image: string;
-  skill?: { title: string }[];
-}> = ({ render, skill, image }) => {
+const Skill: React.FC<skill> = ({ render, skill, image }) => {
   return (
     <div className="relative group  w-6/12 md:w-4/12 aspect-[3/4] p-6 [perspective:1500px]">
       <div className="  p-6 absolute  w-full aspect-[3/4]">
