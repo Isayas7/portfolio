@@ -5,7 +5,7 @@ import React from "react";
 
 const CustomCard = ({ album, width, height, aspectRatio }) => {
   return (
-    <Link href={""}>
+    <Link href={""} className=" w-6/12 sm:w-4/12 lg:w-3/12 p-6">
       <div className="overflow-hidden rounded-md">
         <Image
           src={"/p2.jpg"}
@@ -13,7 +13,7 @@ const CustomCard = ({ album, width, height, aspectRatio }) => {
           width={width}
           height={height}
           className={cn(
-            "h-full w-full object-cover transition-all hover:scale-105",
+            "w-full  transition-all hover:scale-105",
             aspectRatio === "portrait" ? "aspect-[3/4]" : "aspect-square"
           )}
         />

@@ -6,6 +6,42 @@ import Skill from "@/components/Skill";
 import { ModeToggle } from "@/components/themeprovider/mode-toggle";
 import Link from "next/link";
 
+interface MenuItem {
+  render?: string;
+  image?: string;
+  skill?: { title: string }[];
+  category?: string;
+  items?: { title: string }[];
+}
+
+const menuItems: MenuItem[] = [
+  {
+    render: "Frontend Skill",
+    image: "/p1.jpg",
+    skill: [
+      { title: "Javascript" },
+      { title: "HTML-5" },
+      { title: "CSS" },
+      { title: "ReactJs" },
+      { title: "NextJs" },
+      { title: "Tailwind" },
+      { title: "Sass" },
+      { title: "React Query" },
+      { title: "Redux Toolkit" },
+    ],
+  },
+  {
+    render: "Backend Skill",
+    image: "/p2.jpg",
+    skill: [{ title: "Nosejs" }, { title: "Expressjs" }, { title: "Python" }],
+  },
+  {
+    render: "Database Skill",
+    image: "/p3.jpg",
+    skill: [{ title: "MongoDb" }, { title: "Firebase" }, { title: "MySql" }],
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen pt-24">
@@ -29,28 +65,34 @@ export default function Home() {
 
         <section className="min-h-screen w-full ">
           <h1 className="text-center mb-8 text-5xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text ">
-            My Skill and Education
+            My Skill
           </h1>
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-5">
-            <Skill render={"fronend Skill"} />
-            <Skill render={"backend Skill"} />
-            <Skill render={"database Skill"} />
-            <Skill render={"Education and Certficate"} />
+          <div className="flex flex-wrap">
+            {menuItems.map((item) =>
+              item.render ? (
+                <Skill
+                  key={item.render}
+                  render={item.render}
+                  skill={item.skill}
+                  image={item.image}
+                />
+              ) : null
+            )}
           </div>
         </section>
         <section className="min-h-screen w-full ">
           <h1 className="text-center mb-8 text-5xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text ">
             My Projects
           </h1>
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-5">
-            <CustomCard width={250} height={300} aspectRatio="" />
-            <CustomCard width={250} height={300} aspectRatio="" />
+          <div className="  flex flex-wrap ">
+            <CustomCard width={950} height={1000} aspectRatio="" />
+            <CustomCard width={950} height={1000} aspectRatio="" />
 
-            <CustomCard width={250} height={300} aspectRatio="" />
+            <CustomCard width={950} height={1000} aspectRatio="" />
 
-            <CustomCard width={250} height={300} aspectRatio="" />
+            <CustomCard width={950} height={1000} aspectRatio="" />
 
-            <CustomCard width={250} height={300} aspectRatio="" />
+            <CustomCard width={950} height={1000} aspectRatio="" />
           </div>
         </section>
         <section className="min-h-screen w-full flex items-center  ">
