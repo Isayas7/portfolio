@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -16,12 +15,13 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
+import { Resend } from "resend";
 
 const formSchema = z.object({
   youremail: z.string().min(2, {
     message: "your Email must be at least 2 characters.",
   }),
-  subject: z.string().min(2, {
+  message: z.string().min(2, {
     message: "your Email must be at least 2 characters.",
   }),
 });
@@ -31,20 +31,29 @@ const Contact = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       youremail: "",
+      message: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    await resend.emails.send({
+      from: "Contact Form <onboarding@resend.dev>",
+      to: "isayas2024@gmail.com",
+      subject: "Message from contact form",
+      text: "hello world",
+    });
   }
 
   return (
-    <div className="  w-full gap-5 md:flex">
+    <div
+      id="contact"
+      className=" container mx-auto w-full gap-5 md:flex  mt-20 scroll-mt-28 "
+    >
       <div className="flex-1">
         <h1 className="font-bold text-xl">Let's Connect Me</h1>
         <p className="text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam
-          facilis laudantium, maiores sequi vero.
+          I'm always excited to discuss new projects and opportunities. Feel
+          free to reach out and let's chat!
         </p>
         <div className="flex gap-5 my-3">
           <span>facebook</span>
@@ -63,7 +72,7 @@ const Contact = () => {
                 <FormItem>
                   <FormLabel>Your Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="isayas@gmail.com" {...field} />
+                    <Input placeholder="your email" {...field} />
                   </FormControl>
 
                   <FormMessage />
@@ -72,20 +81,20 @@ const Contact = () => {
             />
             <FormField
               control={form.control}
-              name="subject"
+              name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Subject</FormLabel>
                   <FormControl>
-                    <Input placeholder="Just say hi" {...field} />
+                    <Textarea
+                      placeholder="Type your message here."
+                      {...field}
+                    />
                   </FormControl>
 
                   <FormMessage />
                 </FormItem>
               )}
             />
-
-            <Textarea placeholder="Type your message here." />
 
             <button
               className="w-full p-4 rounded-md bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
