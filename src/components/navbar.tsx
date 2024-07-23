@@ -5,7 +5,14 @@ import Link from "next/link";
 import React from "react";
 import { ModeToggle } from "./themeprovider/mode-toggle";
 import { links } from "@/lib/data";
-
+import { FiAlignCenter } from "react-icons/fi";
+import { Button } from "./ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 export interface Link_Type {
   id: number;
   link: string;
@@ -50,7 +57,7 @@ const Navbar = () => {
         </Link>
 
         <div className="flex gap-5 items-center">
-          <div className="flex gap-5 items-center text-card-foreground ">
+          <div className="hidden md:flex gap-5 items-center text-card-foreground  ">
             {links.map((link) => (
               <Link
                 key={link.hash}
@@ -61,6 +68,28 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="md:hidden" variant="outline" size="icon">
+                <FiAlignCenter className="  h-[1.2rem] w-[1.2rem] " />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {links.map((link) => (
+                <Link
+                  key={link.hash}
+                  href={link.hash}
+                  className="text-lg font-medium  underline-offset-4"
+                >
+                  <DropdownMenuItem className="cursor-pointer">
+                    {link.name}
+                  </DropdownMenuItem>
+                </Link>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <ModeToggle />
         </div>
       </div>

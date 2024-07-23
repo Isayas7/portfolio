@@ -28,8 +28,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="-z-20 bg-[#ad68a4] absolute top-[-6rem] right-[-11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
-            <div className="-z-20 bg-[#456179] absolute top-[-1rem] left-[-30rem] h-[50rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+            <div className="-z-20 bg-[#ac52a0] absolute top-[-6rem] right-[1rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+            <div className="-z-20 bg-[#3c6385] absolute top-[-1rem] left-[-30rem] h-[50rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
             <Navbar />
             {children}
             <Footer />

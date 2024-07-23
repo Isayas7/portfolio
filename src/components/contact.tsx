@@ -66,21 +66,21 @@ const Contact = () => {
           I am always excited to discuss new projects and opportunities. Feel
           free to reach out and Let us chat!
         </p>
-        <div className="flex gap-5 my-3">
+        <div className="flex flex-wrap sm:flex-nowrap gap-5 my-3">
           <Link href={"https://www.linkedin.com/in/isayas7/"} target="_blanck">
-            <FaLinkedin className="size-10 md:size-14" />
+            <FaLinkedin className=" size-7 sm:size-10 md:size-14" />
           </Link>
           <Link href={"https://github.com/Isayas7"} target="_blanck">
-            <FaGithub className="size-10 md:size-14" />
+            <FaGithub className=" size-7 sm:size-10 md:size-14" />
           </Link>
           <Link href={""}>
-            <FaFacebookF className="size-10 md:size-14" />
+            <FaFacebookF className=" size-7 sm:size-10 md:size-14" />
           </Link>
           <Link href={""}>
-            <FaXTwitter className="size-10 md:size-14" />
+            <FaXTwitter className=" size-7 sm:size-10 md:size-14" />
           </Link>
           <Link href={""}>
-            <FaInstagram className="size-10 md:size-14" />
+            <FaInstagram className=" size-7 sm:size-10 md:size-14" />
           </Link>
         </div>
       </div>

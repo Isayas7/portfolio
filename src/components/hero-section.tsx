@@ -14,31 +14,31 @@ const HeroSection = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="w-1/2 text-center "
+        className="w-full md:w-1/2 text-center "
       >
         <motion.h1
-          className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+          className=" w-full mb-10 mt-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
         >
           <span className="font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
             Hello, I am Isayas.
           </span>{" "}
-          I am a experienced{" "}
+          I am an experienced{" "}
           <span className="font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
             full-stack developer.
           </span>{" "}
           I enjoy building <span className="italic">sites & apps</span>
         </motion.h1>
 
-        <div className="flex gap-5 justify-center items-center mt-10">
-          <Link href="#contact">
-            <Button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mt-10">
+          <Link href="#contact" className="w-full">
+            <Button className="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
               Hire me Now
             </Button>
           </Link>
-          <Link href="/resume.pdf" download>
-            <Button className="bg-gray-300 text-gray-800 py-2 px-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <Link className="w-full " href="/resume.pdf" download>
+            <Button className="w-full bg-gray-300 text-gray-800 py-2 px-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
               Download my CV
             </Button>
           </Link>
@@ -48,9 +48,15 @@ const HeroSection = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="w-1/2 text-center "
+        className="w-full md:w-1/2 text-center "
       >
-        <Image src={"/isayas.png"} alt="" width={750} height={900} />
+        <Image
+          className="w-full "
+          src={"/isayas.png"}
+          alt=""
+          width={750}
+          height={900}
+        />
       </motion.div>
     </section>
   );
