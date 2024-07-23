@@ -61,10 +61,10 @@ const Contact = () => {
       className=" container mx-auto w-full gap-5 md:flex  mt-20 scroll-mt-28 "
     >
       <div className="flex-1">
-        <h1 className="font-bold text-xl">Let's Connect Me</h1>
+        <h1 className="font-bold text-xl">Let us Connect Me</h1>
         <p className="text-gray-500">
-          I'm always excited to discuss new projects and opportunities. Feel
-          free to reach out and let's chat!
+          I am always excited to discuss new projects and opportunities. Feel
+          free to reach out and Let us chat!
         </p>
         <div className="flex gap-5 my-3">
           <Link href={"https://www.linkedin.com/in/isayas7/"} target="_blanck">

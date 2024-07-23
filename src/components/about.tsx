@@ -24,9 +24,9 @@ const About = () => {
           mobile applications. I work as a full stack web developer. I have
           worked with Node.js, Redux Toolkit, React, React query, and
           JavaScript. Express, Next.JS, HTML, CSS, PHP, React Native, and Git. I
-          pick things up quickly, and I'm constantly trying to increase my skill
-          set and knowledge. Being a team player, I am eager to collaborate with
-          others to develop incredible applications.
+          pick things up quickly, and I am constantly trying to increase my
+          skill set and knowledge. Being a team player, I am eager to
+          collaborate with others to develop incredible applications.
         </p>
         <div className="flex items-center  gap-5">
           <Button

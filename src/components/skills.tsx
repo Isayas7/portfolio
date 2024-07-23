@@ -29,7 +29,7 @@ export default function Skills() {
           My Skills
         </h2>
         <p className="mx-auto max-w-[700px]  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed animate-fade-in-up">
-          I'm proficient in a variety of web development technologies.
+          I am proficient in a variety of web development technologies.
         </p>
       </div>
       <ul className="flex flex-wrap justify-center gap-2 text-lg  text-gray-800">

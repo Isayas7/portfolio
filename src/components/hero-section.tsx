@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { TypeAnimation } from "react-type-animation";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,9 +22,9 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
         >
           <span className="font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
-            Hello, I'm Isayas.
+            Hello, I am Isayas.
           </span>{" "}
-          I'm a experienced{" "}
+          I am a experienced{" "}
           <span className="font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
             full-stack developer.
           </span>{" "}
