@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className=" mt-3 border z-10  border-t border-slate-900/10 dark:border-slate-300/10 ">
       <div className="container p-5 flex justify-between items-center">
         <Image
-          src="/logo2.jpg"
+          src="/logo.jpg"
           alt="my image"
           className="  rounded-full"
           width={100}

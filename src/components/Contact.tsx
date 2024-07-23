@@ -3,11 +3,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -15,14 +13,16 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
-import { Resend } from "resend";
+import { FaFacebookF, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
+import { FaXTwitter } from "react-icons/fa6";
 
 const formSchema = z.object({
-  youremail: z.string().min(2, {
-    message: "your Email must be at least 2 characters.",
+  senderEmail: z.string().min(2, {
+    message: "Please Enter valid Email.",
   }),
   message: z.string().min(2, {
-    message: "your Email must be at least 2 characters.",
+    message: "Your message should be at least 10 characters.",
   }),
 });
 
@@ -30,18 +30,29 @@ const Contact = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      youremail: "",
+      senderEmail: "",
       message: "",
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
-      to: "isayas2024@gmail.com",
-      subject: "Message from contact form",
-      text: "hello world",
-    });
+    const JSONdata = JSON.stringify(values);
+    const endpoint = "/api/send";
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSONdata,
+    };
+
+    const response = await fetch(endpoint, options);
+    const resData = await response.json();
+
+    if (response.status === 200) {
+      form.reset();
+    }
   }
 
   return (
@@ -56,10 +67,21 @@ const Contact = () => {
           free to reach out and let's chat!
         </p>
         <div className="flex gap-5 my-3">
-          <span>facebook</span>
-          <span>facebook</span>
-          <span>facebook</span>
-          <span>facebook</span>
+          <Link href={"https://www.linkedin.com/in/isayas7/"} target="_blanck">
+            <FaLinkedin className="size-10 md:size-14" />
+          </Link>
+          <Link href={"https://github.com/Isayas7"} target="_blanck">
+            <FaGithub className="size-10 md:size-14" />
+          </Link>
+          <Link href={""}>
+            <FaFacebookF className="size-10 md:size-14" />
+          </Link>
+          <Link href={""}>
+            <FaXTwitter className="size-10 md:size-14" />
+          </Link>
+          <Link href={""}>
+            <FaInstagram className="size-10 md:size-14" />
+          </Link>
         </div>
       </div>
       <div className="flex-1">
@@ -67,7 +89,7 @@ const Contact = () => {
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormField
               control={form.control}
-              name="youremail"
+              name="senderEmail"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Your Email</FormLabel>

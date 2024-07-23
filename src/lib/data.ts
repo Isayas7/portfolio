@@ -1,4 +1,6 @@
 import bus from "/public/bus.png";
+import portfolio from "/public/portfolio.png";
+import productstore from "/public/productstore.png";
 import campus from "/public/campus.png";
 import marketPlace from "/public/market-place.png";
 
@@ -46,6 +48,26 @@ export const projectsData = [
     imageUrl: campus,
   },
   {
+    title: "Product Store",
+    link: "https://github.com/Isayas7/product-store",
+    deploy: "",
+
+    description:
+      "Product store web app Using React.js, MongoDB , express with redux toolkit for global state management .",
+
+    imageUrl: productstore,
+  },
+  {
+    title: "Portfolio",
+    link: "https://github.com/Isayas7/portfolio",
+    deploy: "",
+
+    description: "Portfolio Website with Next.js.",
+
+    imageUrl: portfolio,
+  },
+
+  {
     title: "Bus Reservation and Control System",
     link: "https://github.com/Isayas7/Bus-Station-Management-System",
     deploy: "",
@@ -66,14 +88,14 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
+  "Mysql",
+  "Firebase",
   "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
+  "Redux Toolkit",
+  "React Query",
   "Express",
-  "PostgreSQL",
+  "C++",
+  "Java",
   "Python",
-  "Django",
   "Framer Motion",
 ] as const;

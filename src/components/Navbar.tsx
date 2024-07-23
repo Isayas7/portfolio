@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="container mx-auto  w-full flex justify-between items-center">
         <Link href={""}>
           <Image
-            src="/logo2.jpg"
+            src="/logo.jpg"
             alt="my image"
             className="  rounded-full"
             width={100}
