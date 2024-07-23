@@ -1,6 +1,6 @@
 import About from "@/components/about";
 import Contact from "@/components/Contact";
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/hero-section";
 import Projects from "@/components/Projects";
 import Skills from "@/components/skills";
 
