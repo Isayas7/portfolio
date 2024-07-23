@@ -28,20 +28,21 @@ const About = () => {
           skill set and knowledge. Being a team player, I am eager to
           collaborate with others to develop incredible applications.
         </p>
-        <div className="flex items-center  gap-5">
+        <div className="flex items-center gap-5">
           <Button
             onClick={() => setActive("Eduction")}
-            variant={`${active === "Eduction" ? "" : "outline"}`}
+            variant={active === "Eduction" ? "default" : "outline"}
           >
             Eduction
           </Button>
           <Button
             onClick={() => setActive("Certificate")}
-            variant={`${active === "Certificate" ? "" : "outline"}`}
+            variant={active === "Certificate" ? "default" : "outline"}
           >
             Certificate
           </Button>
         </div>
+
         {active === "Eduction" && (
           <ul className=" flex flex-col gap-3">
             <li className="flex items-center gap-2">
