@@ -22,10 +22,10 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="max-w-[53rem] mx-auto scroll-mt-28 text-center mt-20 "
+      className="max-w-[53rem] mx-auto scroll-mt-28 text-center "
     >
       <div className="space-y-3 animate-fade-in mb-8">
-        <h2 className="text-3xl capitalize font-bold tracking-tighter sm:text-4xl md:text-5xl drop-shadow-md">
+        <h2 className="text-3xl capitalize font-bold tracking-wide sm:text-4xl md:text-5xl drop-shadow-md">
           My Skills
         </h2>
         <p className="mx-auto max-w-[700px]  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed animate-fade-in-up">

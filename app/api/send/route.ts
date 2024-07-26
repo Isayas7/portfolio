@@ -21,8 +21,8 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    return NextResponse.json(data);
+    return NextResponse.json("data");
   } catch (error: any) {
-    return NextResponse.json({ error: error.message || "An error occurred" });
+    return NextResponse.json("Some thing goes wrong, try again");
   }
 }

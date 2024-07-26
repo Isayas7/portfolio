@@ -14,18 +14,18 @@ const fadeInAnimationVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.4 * index,
+      delay: 0.2 * index,
     },
   }),
 };
 
 const Projects = () => {
   return (
-    <section id="projects" className="mt-20 w-full scroll-mt-28 ">
+    <section id="projects" className=" w-full scroll-mt-28 ">
       <div className="container  mx-auto space-y-12 px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+            <h2 className="text-3xl font-bold tracking-wide sm:text-5xl">
               My Projects
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -45,9 +45,9 @@ const Projects = () => {
                 once: true,
               }}
               custom={index}
-              className="group  "
+              className="group hover:bg-[#D1D5DB] dark:hover:bg-[#192840] p-2 rounded-md transition-all ease-in duration-300"
             >
-              <Link href="#" className="group" prefetch={false}>
+              <div className="group">
                 <div className="overflow-hidden rounded-lg">
                   <Image
                     src={project.imageUrl}
@@ -61,12 +61,12 @@ const Projects = () => {
                   <h3 className="text-lg font-bold">{project.title}</h3>
                   <p className="text-muted-foreground">{project.description}</p>
                 </div>
-              </Link>
-              <div className="flex justify-between mt-2">
+              </div>
+              <div className="flex justify-between mt-2 text-white">
                 {project?.deploy && (
                   <Link
                     href={project?.deploy}
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex items-center justify-center rounded-md bg-green-700 hover:bg-green-900 px-4 py-2 text-sm font-medium "
                     prefetch={false}
                     target="_blank"
                   >
@@ -76,7 +76,7 @@ const Projects = () => {
 
                 <Link
                   href={project?.link}
-                  className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex items-center justify-center rounded-md  bg-orange-700 hover:bg-orange-900 px-4 py-2 text-sm font-medium"
                   prefetch={false}
                   target="_blank"
                 >
