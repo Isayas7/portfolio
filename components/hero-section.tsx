@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="flex flex-col md:flex-row items-center scroll-mt-28  pt-20 md:pt-0"
+      className="flex flex-col md:flex-row gap-5 items-center scroll-mt-28  pt-20 md:pt-0"
     >
       {/* LEFT */}
       <motion.div

@@ -55,9 +55,9 @@ const Contact = () => {
       className=" container  w-full mx-auto scroll-mt-28 mb-36"
     >
       <h2 className="text-3xl font-bold tracking-wider sm:text-5xl text-center mb-8">
-        Contact
+        Contact me
       </h2>
-      <div className="md:flex gap-10   ">
+      <div className=" flex flex-col-reverse md:flex-row gap-10   ">
         <div className="flex-1 mb-10 md:mb-0">
           <h1 className="font-bold text-xl">Let us Connect Me</h1>
           <p className="text-gray-500">
