@@ -29,8 +29,8 @@ const Projects = () => {
               My Projects
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Check out some of our recent work and see how we can help bring
-              your ideas to life.
+              Check out some of my recent work and see how I can help bring your
+              ideas to life.
             </p>
           </div>
         </div>
