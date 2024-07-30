@@ -39,7 +39,12 @@ const HeroSection = () => {
               Hire me Now
             </button>
           </Link>
-          <Link className="w-full " href="/resume.pdf" download>
+          <Link
+            className="w-full "
+            href="/isayas-melkamu-CV.pdf"
+            download
+            target="_blank"
+          >
             <button className="w-full bg-gray-300 text-gray-800 py-2 px-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
               Download my CV
             </button>
