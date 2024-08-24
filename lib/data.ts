@@ -3,6 +3,7 @@ import portfolio from "/public/portfolio.png";
 import productstore from "/public/productstore.png";
 import campus from "/public/campus.png";
 import marketPlace from "/public/market-place.png";
+import book from "/public/book.png";
 
 export const links = [
   {
@@ -36,6 +37,15 @@ export const projectsData = [
       "Online Marketplace Platform Using React.js with Next.js 14 framework and MongoDB with Chapa Payment Processor.",
 
     imageUrl: marketPlace,
+  },
+  {
+    title: "Book Store for Rent ",
+    link: "https://github.com/Isayas7/book-rent-2f-capital",
+    deploy: "https://book-rent-frontend-zeta.vercel.app",
+    description:
+      "Book store for rent Using React.js with Next.js 14 framework, Express and posgresql with prisma and CASL for Authorization.",
+
+    imageUrl: book,
   },
   {
     title: "Campus Book Club App",
@@ -92,6 +102,8 @@ export const skillsData = [
   "Framer Motion",
   "MongoDB",
   "Mysql",
+  "posgresql",
+  "prisma",
   "Firebase",
   "Redux Toolkit",
   "React Query",
