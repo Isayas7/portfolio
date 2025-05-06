@@ -63,25 +63,38 @@ const Projects = () => {
                 </div>
               </div>
               <div className="flex justify-between mt-2 text-white">
-                {project?.deploy && (
+                {project?.deploy === "download" ? (
                   <Link
-                    href={project?.deploy}
+                    href="/Book store.apk"
+                    download
+                    target="_blank"
                     className="inline-flex items-center justify-center rounded-md bg-green-700 hover:bg-green-900 px-4 py-2 text-sm font-medium "
+                  >
+                    Download
+                  </Link>
+                ) : (
+                  project?.deploy && (
+                    <Link
+                      href={project?.deploy}
+                      className="inline-flex items-center justify-center rounded-md bg-green-700 hover:bg-green-900 px-4 py-2 text-sm font-medium "
+                      prefetch={false}
+                      target="_blank"
+                    >
+                      Live Demo
+                    </Link>
+                  )
+                )}
+
+                {project?.link && (
+                  <Link
+                    href={project?.link}
+                    className="inline-flex items-center justify-center rounded-md  bg-orange-700 hover:bg-orange-900 px-4 py-2 text-sm font-medium"
                     prefetch={false}
                     target="_blank"
                   >
-                    Live Demo
+                    GitHub
                   </Link>
                 )}
-
-                <Link
-                  href={project?.link}
-                  className="inline-flex items-center justify-center rounded-md  bg-orange-700 hover:bg-orange-900 px-4 py-2 text-sm font-medium"
-                  prefetch={false}
-                  target="_blank"
-                >
-                  GitHub
-                </Link>
               </div>
             </motion.div>
           ))}

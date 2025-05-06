@@ -4,6 +4,7 @@ import productstore from "/public/productstore.png";
 import campus from "/public/campus.png";
 import marketPlace from "/public/market-place.png";
 import book from "/public/book.png";
+import qenget from "/public/qegnet.png"
 
 export const links = [
   {
@@ -30,6 +31,14 @@ export const links = [
 
 export const projectsData = [
   {
+    title: "qegnet",
+    link: "",
+    deploy: "https://qegnet.et",
+    description:
+      "Online platform based in Ethiopia that offers a variety of challenge and competition based opportunities..",
+    imageUrl: qenget,
+  },
+  {
     title: "Market-place platform",
     link: "https://github.com/Isayas7/market-place",
     deploy: "https://market-place-wku.vercel.app/",
@@ -41,7 +50,7 @@ export const projectsData = [
   {
     title: "Book Store for Rent ",
     link: "https://github.com/Isayas7/book-rent-2f-capital",
-    deploy: "https://book-rent-frontend-zeta.vercel.app",
+    deploy: "https://book-store-2f-capital.vercel.app",
     description:
       "Book store for rent Using React.js with Next.js 14 framework, Express and posgresql with prisma and CASL for Authorization.",
 
@@ -50,7 +59,7 @@ export const projectsData = [
   {
     title: "Campus Book Club App",
     link: "https://github.com/Isayas7/Campus-book-clubs",
-    deploy: "",
+    deploy: "download",
 
     description:
       "Campus Book Club App Using React native and firebase. It is where book lovers on campus can connect, discuss, and explore new reads together.",
