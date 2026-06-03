@@ -34,7 +34,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          I am an experienced developer who enjoys building modern, responsive, and dynamic sites & apps. Let's create something amazing together.
+          I am an experienced developer who enjoys building modern, responsive, and dynamic sites & apps. Let&apos;s create something amazing together.
         </motion.p>
 
         {/* BUTTONS */}
