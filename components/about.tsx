@@ -4,22 +4,25 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const About = () => {
-  const [active, setActive] = useState("Eduction");
+  const [active, setActive] = useState("Education");
   return (
     <section id="about" className="scroll-mt-28">
       <h2 className="text-3xl text-center capitalize font-bold tracking-wide sm:text-4xl md:text-5xl drop-shadow-md mb-10">
         About me
       </h2>
-      <div className=" flex flex-col md:flex-row  gap-10  ">
-        <Image
-          className="md:w-2/6 rounded-md"
-          alt="computer"
-          src={"/computer.jpg"}
-          width={1009}
-          height={1000}
-        />
+      <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16">
+        <div className="w-full md:w-1/3">
+          <Image
+            className="w-full h-auto object-contain"
+            alt="Isayas"
+            src="/isayas.png"
+            width={600}
+            height={600}
+            priority
+          />
+        </div>
 
-        <div className=" flex flex-col gap-3 md:w-4/6 text-lg tracking-wider dark:text-white/80">
+        <div className="flex flex-col gap-4 md:w-2/3 text-lg tracking-wider dark:text-white/80">
           <p>
             I have a passion for developing dynamic, responsive websites and
             mobile applications. I work as a full stack web developer. I have
@@ -29,30 +32,30 @@ const About = () => {
             skill set and knowledge. Being a team player, I am eager to
             collaborate with others to develop incredible applications.
           </p>
-          <div className="flex items-center gap-5">
-            <span
-              onClick={() => setActive("Eduction")}
+          <div className="flex items-center gap-6 mt-2">
+            <button
+              onClick={() => setActive("Education")}
               className={`${
-                active === "Eduction" ? " border-b border-gray-400" : ""
-              } cursor-pointer`}
+                active === "Education" ? "border-b-2 border-gray-500 font-semibold" : ""
+              } cursor-pointer pb-1 transition-all`}
             >
-              Eduction
-            </span>
-            <span
+              Education
+            </button>
+            <button
               onClick={() => setActive("Certificate")}
               className={`${
-                active === "Certificate" ? "border-b border-gray-400" : ""
-              } cursor-pointer`}
+                active === "Certificate" ? "border-b-2 border-gray-500 font-semibold" : ""
+              } cursor-pointer pb-1 transition-all`}
             >
               Certificate
-            </span>
+            </button>
           </div>
 
-          {active === "Eduction" && (
-            <ul className=" flex flex-col gap-3">
+          {active === "Education" && (
+            <ul className="flex flex-col gap-3 mt-2">
               <li className="flex items-center gap-x-2 ">
                 <ArrowRight className="size-6" />
-                Software Enginering
+                Software Engineering
               </li>
               <li className="flex items-center gap-x-2">
                 <ArrowRight className="size-6" />
@@ -61,7 +64,7 @@ const About = () => {
             </ul>
           )}
           {active === "Certificate" && (
-            <ul className=" flex flex-col gap-3">
+            <ul className="flex flex-col gap-3 mt-2">
               <li className="flex items-center gap-x-2">
                 <ArrowRight className="size-6" />
                 Red Hat System Administration
