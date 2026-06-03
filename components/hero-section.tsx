@@ -22,14 +22,14 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
         >
-          <span className="block mb-2 text-center w-full">Hello, I am Isayas.</span>
+          <span className="block mb-2 text-center w-full text-gray-900 dark:text-white">Hello, I am Isayas.</span>
           <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent block mt-2 pb-2 w-fit mx-auto text-center">
             Full-Stack Developer
           </span>
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed px-4"
+          className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
