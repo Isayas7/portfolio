@@ -239,7 +239,7 @@ export const experienceData: ExperienceItem[] = [
     company: "2F Capital",
     type: "Full-Time",
     location: "Addis Ababa, Ethiopia",
-    duration: "2024 - Present",
+    duration: "Aug 2024 - Present",
     description:
       "Architecting and developing custom full-stack web and mobile platforms for clients and enterprise products. Specializing in Next.js, Node.js APIs, and database architecture.",
     highlights: [
@@ -254,7 +254,7 @@ export const experienceData: ExperienceItem[] = [
     company: "Black Bridge Technology",
     type: "Remote, Part time",
     location: "Addis Ababa, Ethiopia",
-    duration: "Aug 2024 - Present",
+    duration: "Aug 2025 - Present",
     description:
       "Architected comprehensive FinOps and Fleet modules for logistics systems, integrating multi-channel notification engines and developing end-to-end supply chain visibility solutions.",
     highlights: [
