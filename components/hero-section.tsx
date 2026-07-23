@@ -90,7 +90,7 @@ const HeroSection = () => {
                   <a
                     href={personalInfo.resumeUrl}
                     download
-                    className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-medium text-sm sm:text-base bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white transition-all duration-200 shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/35 hover:scale-[1.02] active:scale-100 w-full sm:w-auto"
+                    className="whitespace-nowrap inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-medium text-sm sm:text-base bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white transition-all duration-200 shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/35 hover:scale-[1.02] active:scale-100 w-full sm:w-auto"
                     aria-label="Download Resume"
                   >
                     <Download className="w-4 h-4" />
