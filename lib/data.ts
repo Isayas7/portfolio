@@ -68,7 +68,7 @@ export const projectsData: ProjectItem[] = [
     deploy: "https://qegnet.et",
     description:
       "Online platform based in Ethiopia that offers a variety of challenge and competition-based opportunities for creators and participants.",
-    tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Material UI"],
     imageUrl: qenget,
   },
   {
